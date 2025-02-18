@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { GiFallingLeaf } from 'react-icons/gi'
 
@@ -25,7 +26,7 @@ const LoginPage = () => {
       ></div>
       <div className='flex flex-col items-center justify-center w-[20%] text-white z-[9999]'>
         <div className='flex flex-col items-start w-full'>
-          <h1 className='text-5xl font-bold mb-3'>Login</h1>
+          <h1 className='text-5xl font-bold mb-3'>LOGIN</h1>
           <form className='flex flex-col w-full'>
             <p className='text-2xl'>email</p>
             <input
@@ -39,10 +40,16 @@ const LoginPage = () => {
               placeholder='Password'
               className='p-2 py-1 outline-none rounded-lg bg-gradient-to-b from-formGreen to-white text-black focus:outline focus:outline-darkGreen'
             />
+            <Link
+              href='/forgot-password'
+              className='text-slate-300 text-xs mt-1 hover:text-white transition-colors duration-100'
+            >
+              Forgot your password?
+            </Link>
           </form>
         </div>
         <GiFallingLeaf
-          className='text-leafColor text-6xl mt-8 cursor-pointer rotate-180 hover:rotate-[190deg] transition-all duration-200'
+          className='text-leafColor text-7xl mt-5 cursor-pointer rotate-180 hover:rotate-[190deg] transition-all duration-200'
           onClick={handleLeafClick}
         />
       </div>
