@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { GiFallingLeaf } from 'react-icons/gi'
 
 const LoginPage = () => {
-  const [scaleX, setScaleX] = useState(false)
+  const [scaleX, setScaleX] = useState(true)
 
   const handleLeafClick = () => {
     setScaleX((prev) => !prev)
