@@ -1,4 +1,6 @@
-import '../../globals.css'
+export const metadata = {
+  title: 'BinBondhu | Login',
+}
 
 export default function LoginLayout({ children }) {
   return (
