@@ -19,6 +19,8 @@ export default {
         textLightGreen: '#138017',
         textDarkGreen: '#235E27',
         landingText: '#EFEFEF',
+        homeLightGreen: '#60C464',
+        homeDarkGreen: '#0B9D10',
       },
     },
   },
