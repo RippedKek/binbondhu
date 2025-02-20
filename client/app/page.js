@@ -1,3 +1,4 @@
+import Body from '@/components/Body'
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <div className='flex w-full h-[calc(100vh-80px)'>
         <Sidebar />
+        <Body />
       </div>
     </div>
   )

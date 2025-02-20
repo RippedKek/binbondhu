@@ -13,7 +13,7 @@ const menu = [
 const Sidebar = () => {
   return (
     <div
-      className='w-1/5 h-[calc(100vh-80px)] bg-gradient-to-t from-[#3DDC42] to-homeDarkGreen '
+      className='w-1/5 h-[calc(100vh-80px)] bg-gradient-to-t from-[#3DDC42] to-homeDarkGreen z-50'
       style={{
         boxShadow:
           'inset 0 -10px 8px 8px rgba(255, 255, 255, 0.3), 5px 0 10px 2px rgba(0, 0, 0, 0.25)',
