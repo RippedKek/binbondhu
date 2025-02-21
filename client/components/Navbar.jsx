@@ -5,10 +5,7 @@ import { FaUser, FaLeaf } from 'react-icons/fa'
 
 const Navbar = () => {
   const [profileOpen, setProfileOpen] = useState(false)
-
-  const handleProfileClick = () => {
-    setProfileOpen(!profileOpen)
-  }
+  const [balanceOpen, setBalanceOpen] = useState(false)
 
   return (
     <div
@@ -28,17 +25,57 @@ const Navbar = () => {
       >
         <FaUser
           size={25}
-          onClick={handleProfileClick}
+          onClick={() => setProfileOpen(true)}
           className='cursor-pointer'
         />
         {profileOpen && (
-          <div className='absolute top-12 left-0 bg-white p-3 z-50 rounded-xl border border-slate-200'>
-            <h1>Profile</h1>
+          <div className='absolute w-full flex flex-col gap-3 top-12 left-0 bg-white p-3 z-50 rounded-xl border border-slate-200'>
+            {/* heading */}
+            <div className='flex items-center justify-between'>
+              <h1>Profile</h1>
+              <h1
+                className='cursor-pointer'
+                onClick={() => setProfileOpen(false)}
+              >
+                x
+              </h1>
+            </div>
+            {/* profile details */}
+            <div className='flex flex-col'>
+              <h1>Tanjeeb Meheran</h1>
+              <h3 className='text-xs text-wrap text-slate-500'>
+                tanjeeb1909@gmail.com
+              </h3>
+              <h3 className='underline mt-2 cursor-pointer'>Edit Profile</h3>
+            </div>
+          </div>
+        )}
+        {balanceOpen && (
+          <div className='absolute w-full flex flex-col gap-3 top-12 left-0 bg-white p-3 z-50 rounded-xl border border-slate-200'>
+            {/* heading */}
+            <div className='flex items-center justify-between'>
+              <h1>Points</h1>
+              <h1
+                className='cursor-pointer'
+                onClick={() => setBalanceOpen(false)}
+              >
+                x
+              </h1>
+            </div>
+            {/* balance details */}
+            <div className='flex flex-col'>
+              <h1>Tanjeeb Meheran</h1>
+              <h3 className='underline mt-2 cursor-pointer'>Redeem Points</h3>
+            </div>
           </div>
         )}
         <div className='border-l-2 h-8 bg-slate-400'></div>
         <div className='relative flex items-center gap-1'>
-          <FaLeaf size={25} />
+          <FaLeaf
+            size={25}
+            className='cursor-pointer'
+            onClick={() => setBalanceOpen(true)}
+          />
           <p className='text-lg font-bold'>19.14</p>
         </div>
       </div>
