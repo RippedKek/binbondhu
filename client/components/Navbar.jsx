@@ -25,7 +25,10 @@ const Navbar = () => {
       >
         <FaUser
           size={25}
-          onClick={() => setProfileOpen(true)}
+          onClick={() => {
+            setBalanceOpen(false)
+            setProfileOpen(true)
+          }}
           className='cursor-pointer'
         />
         {profileOpen && (
@@ -35,7 +38,9 @@ const Navbar = () => {
               <h1>Profile</h1>
               <h1
                 className='cursor-pointer'
-                onClick={() => setProfileOpen(false)}
+                onClick={() => {
+                  setProfileOpen(false)
+                }}
               >
                 x
               </h1>
@@ -74,7 +79,10 @@ const Navbar = () => {
           <FaLeaf
             size={25}
             className='cursor-pointer'
-            onClick={() => setBalanceOpen(true)}
+            onClick={() => {
+              setProfileOpen(false)
+              setBalanceOpen(true)
+            }}
           />
           <p className='text-lg font-bold'>19.14</p>
         </div>

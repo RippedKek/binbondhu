@@ -23,7 +23,7 @@ const Menu = ({ title }) => {
 
   return (
     <div
-      className={`w-[85%] p-2 flex gap-3 items-center justify-start bg-menuBg/50 rounded-l-xl text-white cursor-pointer hover:shadow-lg transition-shadow duration-200 ${
+      className={`w-[85%] p-2 flex gap-3 items-center justify-start bg-menuBg/50 rounded-l-xl text-white cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 ${
         active ? 'border-2 border-r-0 border-white' : 'border-none'
       }`}
       onClick={handleClick}
