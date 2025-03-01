@@ -5,6 +5,9 @@ import React, { useState } from 'react'
 import { GiFallingLeaf } from 'react-icons/gi'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
+import { configDotenv } from 'dotenv'
+
+configDotenv()
 
 const LoginPage = () => {
   const [scaleX, setScaleX] = useState(true)
